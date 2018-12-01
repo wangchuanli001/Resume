@@ -1,204 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>简历生成器</title>
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal-default-theme.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.js"></script>
-    <script src="static/js/script.js"></script>
+  <meta charset="UTF-8">
+  <title>我的简历</title>
+  <meta name="description" content="希望借此机会为贵司献上我的一点绵薄之力，快招我到碗里来吧！">
+  <meta name="keywords" content="关键字1,关键字2">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="dist/css/style.min.css">
+  <link rel="stylesheet" href="dist/css/fontello.min.css">
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-48084758-4', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
-
 <body>
-    <div class="container" id="cv">
-        <div class="side">
-            <div class="me">
-                <div class="portrait"></div>
-                <div class="remodal remodal-img" data-remodal-id="portrait-modal">
-                    <h3>请输入图片URL地址：</h3>
-                    <br/>
-                    <input type="text" id="avatar-url">
-                    <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
-                </div>
-                <h1 id="username" >ekCit</h1>
-                <h4 id="persona-tag" >Python / Web / 互联网教育</h4>
-            </div>
-            <div class="profile info-unit">
-                <h2 class="info-header"><i class="iconfont icon-person"></i> <span class="info-title">基本信息</span></h2>
-                <hr>
-                <ul class="info-list">
-                    <li>
-                        <label class="left-label">姓名</label><span class="label-value">XXX</span></li>
-                    <li>
-                        <label class="left-label">学历</label><span class="label-value">本科</span></li>
-                    <li>
-                        <label class="left-label">毕业院校</label><span class="label-value">北京邮电大学</span></li>
-                    <li>
-                        <label class="left-label">毕业年份</label><span class="label-value">2017</span></li>
-                </ul>
-            </div>
-            <div class="contact info-unit">
-                <h2 class="info-header"><i class="iconfont icon-call"></i> <span class="info-title">联系方式</span></h2>
-                <hr>
-                <ul class="info-list">
-                    <li>
-                        <label class="left-label">手机</label><span class="label-value">182XXXXXXXX</span></li>
-                    <li>
-                        <label class="left-label">邮箱</label><span class="label-value">crmrc2014@gmail.com</span></li>
-                    <li>
-                        <label class="left-label">个人主页</label><span class="label-value">exit-tixe.me</span></li>
-                    <li>
-                        <label class="left-label">Github</label><span class="label-value">github.com/ekCit</span></li>
-                </ul>
-            </div>
-            <div class="skill info-unit">
-                <h2 class="info-header"><i class="iconfont icon-star"></i> <span class="info-title">技能点</span></h2>
-                <hr>
-                <ul class="progress-list">
-                    <li>
-                        <label class="left-label">Python</label>
-                        <progress value="80" max="100"></progress>
-                    </li>
-                    <li>
-                        <label class="left-label">html/css</label>
-                        <progress value="70" max="100"></progress>
-                    </li>
-                    <li>
-                        <label class="left-label">Javascript</label>
-                        <progress value="60" max="100"></progress>
-                    </li>
-                    <li>
-                        <label class="left-label">机器学习</label>
-                        <progress value="60" max="100"></progress>
-                    </li>
-                </ul>
-            </div>
-            <div class="stack info-unit">
-                <h2 class="info-header"><i class="iconfont icon-build"></i> <span class="info-title">技术栈</span></h2>
-                <hr>
-                <ul class="stack-list">
-                    <li>
-                        <label class="left-label">前端</label><span class="label-value">jQuery、Angular.js、React.js</span></li>
-                    </li>
-                    <li>
-                        <label class="left-label">后端</label><span class="label-value">Flask、Django、Twisted、Node.js、MongoDB、MySQL、Redis</span></li>
-                    </li>
-                    <li>
-                        <label class="left-label">其它</label><span class="label-value">我全都是瞎写的。</span></li>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="code info-unit">
-                <h2 class="info-header"><i class="iconfont icon-weixin"></i> <span class="info-title">个人微信</span></h2>
-                <hr>
-                <div class="weixin">
-                    <img src="static/image/weixin.png" alt="">
-
-                </div>
-            </div>
-            <div class="remodal remodal-img" data-remodal-id="weixin-modal">
-                <h3>请输入图片URL地址：</h3>
-                <br/>
-                <input type="text" id="weixin-url">
-                <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
-            </div>
-        </div>
-        <div class="main">
-            <div class="education info-unit right-list">
-                <h2 class="info-header"><i class="iconfont icon-education"></i> <span class="info-title">教育经历</span></h2>
-                <hr>
-                <ul class="experience-list">
-                    <li>
-                        <h3>北京邮电大学 - 网络工程专业（本科）2012-2017</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="work info-unit right-list">
-                <h2 class="info-header"><i class="iconfont icon-work"></i> <span class="info-title">工作经历</span></h2>
-                <hr>
-                <ul class="experience-list">
-                    <li>
-                        <h3>北京创客空间－实习生（实习）</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>实验楼－课程内容（实习）</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </li>
-                </ul class="experience-list">
-            </div>
-            <div class="project info-unit right-list">
-                <h2 class="info-header"><i class="iconfont icon-project"></i> <span class="info-title">个人项目</span></h2>
-                <hr>
-                <ul class="experience-list">
-                    <li>
-                        <h3>基于 Qt 5 的文本编辑器</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam。Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            <br/>
-                        </p>
-                    </li>
-                    <li>
-                        <h3>基于 Flask 的主机监视系统</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>基于 Live2D 与 clmtrackr 的山寨 Facerig</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>如果项目太少，可以在实验楼上找项目做啊:D</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="trophy info-unit">
-                <h2 class="info-header"><i class="iconfont icon-trophy"></i> <span class="info-title">奖项与证书</span></h2>
-                <hr>
-                <ul class="experience-list">
-                    <li>
-                        <h3>小学生作文二等奖</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam。
-                        </p>
-                    </li> 
-                    <li>
-                        <h3>曾获统一冰红茶“再来一瓶”奖</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam。
-                        </p>
-                    </li> 
-                    <li>
-                        <h3>这一行也是为了凑版面</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam。
-                        </p>
-                    </li>                     
-            </div>
-            <div class="aboutme info-unit right-paragraph">
-                <h2 class="info-header"><i class="iconfont icon-flower"></i> <span class="info-title">自我评价</span></h2>
-                <hr>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-        </div>
+<aside>
+  <ul>
+    <li>
+      <a href="http://airing.ursb.me/Airing%27s%20Resume.pdf" target="_blank">PDF 下载</a>
+    </li>
+    <li>
+      <a href="http://blog.ursb.me" target="_blank">Blog</a>
+    </li>
+    <li>
+      <a href="https://github.com/airingursb" target="_blank">GitHub</a>
+    </li>
+  </ul>
+</aside>
+<div class="container">
+  <div class="sidebar">
+    <div class="title">
+      <img src="img/head.png">
+      <h1>我的简历</h1>
+      <h2>"眼存星海，心怀宇宙。"</h2>
+      <b>本网站仅用于记录个人项目经历。</b>
     </div>
-</body>
+    <ul class="side-info">
+      <li class="someRight">
+        <dt><i class="icon-bookmark"></i>Contact. 联系方式</dt>
+        <dd><i class="icon-mail-alt"></i>邮箱: <a href="mailto:wangchaunli_@hotmail.com" target="_blank">wangchaunli_@hotmail.com</a></dd>
+        <dd><i class="icon-wechat"></i>微信: wangchuanli-001</dd>
+        <dd><i class="icon-qq"></i>QQ: <a href="http://wpa.qq.com/msgrd?v=3&uin=978252321&site=qq&menu=yes" target="_blank">978252321</a></dd>
+      </li>
+      <li class="someRight">
+        <dt><i class="icon-bookmark"></i>Application. 应聘岗位</dt>
+        <dd>项目经理</dd>
+        <dd>Java开发工程师</dd>
+		<dd>数据分析师</dd>
+		<dd>Hadoop工程师</dd>
+      </li>
+      <li class="skill">
+        <dt><i class="icon-bookmark"></i>Tech. 技能点</dt>
+        <dd>
+          <div class="skill-name">Java</div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="width: 90%"></div>
+          </div>
+        </dd>
+        <dd>
+          <div class="skill-name">Python</div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="width: 75%"></div>
+          </div>
+        </dd>
+		<dd>
+          <div class="skill-name">C</div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="width: 55%"></div>
+          </div>
+        </dd>
+        <dd>
+          <div class="skill-name">PHP</div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="width: 45%"></div>
+          </div>
+        </dd>
+       <dd>
+          <div class="skill-name">Hadoop</div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="width: 65%"></div>
+          </div>
+        </dd>
+      </li>
+    </ul>
+	
+    <div class="note">
+      <p>我是一个充满活力、对编程极其热爱的软件开发工程师。</p>
+      <p>希望借此机会为贵司献上我的一点绵薄之力，快招我到碗里来吧！</p>
+      <p>本网站仅用于记录个人项目经历。</p>
+    </div>
+  </div>
+  
+  <div class="main">
+    <ul class="main-info">
+      <li class="someRight">
+        <dt><i class="icon-bookmark"></i>Basic info. 基本信息</dt>
+        <dd><span>个人信息:</span> 王传礼 / 男 / 23岁</dd>
+        <dd><span>本科:</span> 2015-2019 / 黄山学院 计算机科学与技术 & 辅修人力资源管理</dd>
+        <dd><span>本科排名:</span> 10% ~ 30%</dd>
+        <dd><span>Blog:</span> <a href="https://www.cnblogs.com/null-/" target="_blank">博客园博客</a></dd>
+        <dd><span>GitHub:</span> <a href="https://github.com/wangchuanli001" target="_blank">wangchuanli</a></dd>
 
+        </dd>
+
+      </li>
+      <li>
+        <dt><i class="icon-bookmark"></i>Experience. 项目与工作经验</dt>
+        <h3>团队项目</h3>
+        <ul class="exp">
+          <li>
+            <div class="circle"></div>
+			<h4>
+              分布式电商项目：品优购：）（2018.6-2018.10）
+              <a href="https://github.com/oh-bear/2life" target="_blank"><i class="icon-link"></i>源代码</a>
+              <a href="https://two-life.github.io" target="_blank"><i class="icon-link"></i>主页</a>
+              <a href="https://itunes.apple.com/cn/app/%E5%8F%8C%E7%94%9F/id1245100877?l=en&mt=8" target="_blank"><i class="icon-link"></i>App Store 下载</a>
+            </h4>
+            
+            <p>全新的日记写作体验，匹配与你志趣相投的另一半，科学的情绪管理。基于 React Native 的 Android & iOS App，已上架 App Store，GitHub 上 Star 200+，历史最高生活榜第7名。（同时有小程序版：双生小日记）</p>
+            <img src="http://airing.ursb.me/image/2life/cover/X-1.png-h600.jpg">
+            <img src="http://airing.ursb.me/image/2life/cover/X-2.png-h600.jpg">
+            <img src="http://airing.ursb.me/image/2life/cover/X-3.png-h600.jpg">
+          </li>
+          <li>
+            <div class="circle"></div>
+            <h4>
+              唯赛健身产品线项目（2017.8-2018.4）
+            </h4>
+            <p>为某创业公司打造的一条产品线，共有6个成熟项目。有基于Vue编写的前后台管理系统、有基于RN编写的用户APP和教练APP、有提供用户购买课程的小程序、还有数据分析与统计、以及成熟的服务端集群。</p>
+            <p>在团队中担任负责人，负责技术选型与核心代码架构编写。</p>
+            <img src="http://airing.ursb.me/image/recyc/home.png">
+            <img src="http://airing.ursb.me/image/recyc/buy.png">
+          </li>
+          
+        </ul>
+        <h3>个人项目</h3>
+        <ul class="exp">
+          <li>
+            <div class="circle"></div>
+            <h4>
+              有聊（Uchat）：基于兴趣分群的匿名聊天应用（开发中）
+              <a href="https://github.com/obaer/uchat" target="_blank"><i class="icon-link"></i>源代码</a>
+              <a href="https://github.com/obaer/uchat-back-end" target="_blank"><i class="icon-link"></i>服务端源码</a>
+            </h4>
+            <p>基于 React Native + Redux + react-router + express 构建的匿名聊天 APP。</p>
+          </li>
+		  
+        </ul>
+      </li>
+      <li>
+        <dt><i class="icon-bookmark"></i>Prize. 获得奖项</dt>
+        <h3>共获奖项：40次。</h3>
+        <ul class="exp">
+         
+          <li>
+            <div class="circle"></div>
+            <p>2018.07 2018中国高校计算机大赛——微信小程序开发赛华南赛区一等奖、杰出奖（1/794）：双生小日记</p>
+          </li>
+          <li>
+            <div class="circle"></div>
+            <p>2017.09 2017中国高校计算机大赛——移动应用创新赛三等奖（10/460）：一图 <a href="https://1ibrary.github.io" target="_blank" style="border: 1px solid #4db6ac; padding: 1px 3px; border-radius: 5px; font-size: 12px"><i
+                class="icon-link"></i>主页</a></p>
+          </li>
+          
+        </ul>
+		
+		
+        <dt><i class="icon-bookmark"></i>Skill. 技能清单</dt>
+        <h3>Java</h3>
+        <ul class="exp">
+          <li>
+            <div class="circle"></div>
+            <h4>HTML / CSS</h4>
+            <p>能够编写语义化的 HTML，模块化的 CSS，完成较复杂的布局</p>
+          </li>
+          
+        </ul>
+        <h3>移动开发</h3>
+        <ul class="exp">
+          <li>
+            <div class="circle"></div>
+            <h4>React Native</h4>
+            <p>能熟练运用 React Native 开发 Android 与 iOS 应用。</p>
+          </li>
+          
+        </ul>
+       
+      </li>
+    </ul>
+  </div>
+</div>
+<footer>
+  <p>Theme by <a href="https://github.com/DIYgod/Resume" target="_blank">DIYgod</a>. Made with <i
+      class="icon-heart throb" style="color: #d43f57;"></i> by me. 最后更新于2018年8月11日</p>
+</footer>
+</body>
 </html>
